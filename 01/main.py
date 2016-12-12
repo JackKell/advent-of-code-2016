@@ -12,9 +12,8 @@ class Taxi(object):
     @property
     def distanceToFirstRevisitedPoint(self):
         firstRevistedPoint = self.getFirstRevistedPoint()
-        print(firstRevistedPoint)
         if (firstRevistedPoint):
-            return self.getDistanceFromPoint(firstRevistedPoint, self.currentPoint)
+            return self.getDistanceFromPoint(firstRevistedPoint, self.startPoint)
         return None
 
     def getDistanceFromPoint(self, startPoint, endPoint):
@@ -45,6 +44,10 @@ class Taxi(object):
             self.move()
             self.history.append(tuple(self.currentPoint))
 
+    def processInstructions(self, instructions):
+        for instruction in instructions:
+            self.processInstruction(instruction)
+
     def getFirstRevistedPoint(self):
         for i in range(1, len(self.history)):
             currentLocation = self.history[i]
@@ -65,12 +68,9 @@ def main():
     with open("input", "r") as inputFile:
         instructions = inputFile.read().split(", ")
     taxi = Taxi()
-    for instruction in instructions:
-        taxi.processInstruction(instruction)
-    print(taxi.history)
-    print("distance to start:", taxi.distanceToStart)
-    print("distance to first revisited point:", taxi.distanceToFirstRevisitedPoint)
-    taxi.printRevistedPoints()
+    taxi.processInstructions(instructions)
+    print("Distance to start from ending point:", taxi.distanceToStart)
+    print("Distance to first revisited point from starting point:", taxi.distanceToFirstRevisitedPoint)
 
 
 if __name__ == '__main__':
