@@ -54,3 +54,6 @@ Finally, after five more moves, you end at 3.
 So, given the actual keypad layout, the code would be 5DB3.
 
 Using the same instructions in your puzzle input, what is the correct bathroom code?
+
+## Source
+http://adventofcode.com/2016/day/2
