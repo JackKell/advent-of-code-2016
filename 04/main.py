@@ -61,6 +61,7 @@ def main():
     for roomCode in validRoomCodes:
         if roomCode.decrypt() == "northpole object storage":
             print("Northpole object storage room number:", roomCode.id)
+            break
 
 if __name__ == '__main__':
     main()
