@@ -25,7 +25,6 @@ class DoorCodeCracker(object):
         currentCode = [" "] * codeLength
         print(currentCode)
         indexValue = 0
-        codeFound = False
         while " " in currentCode:
             currentValue = (value + str(indexValue)).encode("ascii")
             md5Hash = md5()
