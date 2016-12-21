@@ -72,5 +72,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# contine work on the regex at https://regex101.com/delete/FBxSy1Df4n2FYqzHRYQPhi1U
