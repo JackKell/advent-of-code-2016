@@ -44,7 +44,7 @@ class KeyPadSolver(object):
 
 
 def main():
-    with open("input", "r") as inputFile:
+    with open("input.txt", "r") as inputFile:
         instructions = inputFile.read().splitlines()
 
     keypad = [[1, 2, 3],

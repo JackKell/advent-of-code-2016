@@ -65,7 +65,7 @@ class Taxi(object):
 
 
 def main():
-    with open("input", "r") as inputFile:
+    with open("input.txt", "r") as inputFile:
         instructions = inputFile.read().split(", ")
     taxi = Taxi()
     taxi.processInstructions(instructions)

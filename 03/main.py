@@ -22,14 +22,14 @@ class TriangleChecker(object):
 
 
 def main():
-    with open("input", "r") as inputFile:
+    with open("input.txt", "r") as inputFile:
         wallInput = inputFile.read()
 
-    # in the input file make each row a triangle
+    # in the input.txt.txt file make each row a triangle
     trianglesAsRows = [list(map(int, i.split())) for i in wallInput.splitlines()]
     print("Number of valid triangles:", TriangleChecker.validTriangleCount(trianglesAsRows))
 
-    # in the input file make each row a triangle
+    # in the input.txt.txt file make each row a triangle
     columns = [list(col) for col in zip(*trianglesAsRows)]
 
     # flatten the list
